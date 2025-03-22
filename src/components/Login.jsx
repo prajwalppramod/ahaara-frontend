@@ -58,11 +58,11 @@ const Login = () => {
     return (
         <Box sx={{ 
             display: "flex", 
-            justifyContent: "center", 
+            justifyContent: isMobile ? "center" : "flex-start", 
             alignItems: "center",  
             height: "100vh", 
             width: "100vw",
-            backgroundImage: "url('https://www.barsnet.com/wp-content/uploads/2020/03/Nows-The-Time-For-The-Car-Rental-Industry-To-Prep-For-Recovery.jpg')", 
+            backgroundImage: "url('src/assets/loginbg.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -74,10 +74,11 @@ const Login = () => {
                 width: isMobile ? "90%" : 400, 
                 textAlign: "center", 
                 backgroundColor: "#e3f2fd",
+                marginLeft: isMobile ? 0 : "5%", 
                 boxShadow: 3
             }}>
                 <Typography variant="h5" sx={{ color: '#333', fontWeight: "bold", marginBottom: 3 }}>
-                    LOGIN PAGE
+                    Login
                 </Typography>
 
                 <TextField 
@@ -119,16 +120,10 @@ const Login = () => {
                 </Button>
                 <br />
                 <br />
-                <p>Not yet Registered ?</p>
-                <Link to={'/signup'}>
-                <Button 
-                    variant="contained" 
-                    color="primary" 
-                    fullWidth 
-                    sx={{ marginTop: 3, padding: 1.5, fontWeight: "bold", backgroundColor: "#007BFF", "&:hover": { backgroundColor: "#0056b3" } }} 
-                    onClick={handleSubmit}>
-                    Signup
-                </Button></Link>
+                <div className='flex flex-row justify-center items-center -mt-2 -mb-5'>
+                    <h3 className='-mt-1'>Already a user?</h3>
+                    <Link to={'/signup'}> <Button color='primary'>Signup</Button> </Link>
+                </div>
             </Paper>
         </Box>
     );

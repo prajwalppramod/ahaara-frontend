@@ -10,7 +10,7 @@ const Footer = () => {
                 <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
                     <a class="flex title-font font-medium items-center md:justify-start justify-center">
                         <img src="src\assets\meal.svg" className='w-10' alt="" />
-                        <span class="ml-3 text-xl text-white">Ahaara App</span>
+                        <span class="ml-3 text-xl text-white">Aahara App</span>
                     </a>
                     <p class="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Food for everyone</p>
                     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

@@ -1,7 +1,7 @@
 import { Button, TextField, InputAdornment, Typography, Paper, Box, useMediaQuery } from '@mui/material';
 import { AccountCircle, Lock, Email } from '@mui/icons-material';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [data, setData] = useState({
@@ -103,7 +103,7 @@ const Signup = () => {
             alignItems: "center",  
             height: "100vh", 
             width: "100vw",
-            backgroundImage: "url('https://www.barsnet.com/wp-content/uploads/2020/03/Nows-The-Time-For-The-Car-Rental-Industry-To-Prep-For-Recovery.jpg')", 
+            backgroundImage: "url('src/assets/loginbg.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -184,6 +184,11 @@ const Signup = () => {
                     onClick={handleSubmit}>
                     Submit
                 </Button>
+                <div className='flex flex-row justify-center items-center pt-3 -mb-5'>
+                    <h3 className='-mt-1'>Already a user?</h3>
+                    <Link to={'/login'}> <Button color='primary'>Login</Button> </Link>
+                </div>
+                
             </Paper>
         </Box>
     );
